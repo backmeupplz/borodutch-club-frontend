@@ -24,10 +24,10 @@ jobs:
         run: yarn
         shell: bash
       - name: Build code
-        with:
-          node-version: '14'
         run: yarn build
         shell: bash
+        with:
+          node-version: '14'
       - name: Setup Pages
         uses: actions/configure-pages@v2
       - name: Upload artifact
