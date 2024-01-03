@@ -103,7 +103,7 @@ const Dashboard: FC<Props> = ({ token }) => {
       </BodyText>
       <BodyText>
         The Main Document of the Club{' '}
-        <Link url="https://telegra.ph/Glavnyj-dokument-Borodach-Kluba-04-05">
+        <Link url="https://telegra.ph/The-Main-Document-of-Borodutch-Club-01-03">
           is here
         </Link>
         .
