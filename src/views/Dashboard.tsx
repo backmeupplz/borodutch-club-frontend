@@ -47,19 +47,17 @@ const Dashboard: FC<Props> = ({ token }) => {
     return (
       <div>
         <BodyText>
-          Похоже, у тебя еще нет подписки. Чтобы получить пригласительную ссылку
-          в секретный чат, тебе нужно приобрести подписку в $23.11 в месяц,
-          нажав на кнопку ниже!
+          It seems that you don't have a subscription yet. To get an invitation
+          link to the secret chat, you need to purchase a subscription for
+          $23.11 per month by clicking the button below!
         </BodyText>
-        <ButtonContainer onClick={openCheckout}>
-          Оформить подписку!
-        </ButtonContainer>
+        <ButtonContainer onClick={openCheckout}>Subscribe!</ButtonContainer>
         <ButtonContainer
           onClick={() => {
             window.location.reload()
           }}
         >
-          Ну или обновить страницу, вдруг что-то не подгрузилось
+          Or try refreshing the page, in case something didn't load properly.
         </ButtonContainer>
       </div>
     )
@@ -69,24 +67,25 @@ const Dashboard: FC<Props> = ({ token }) => {
     return (
       <div>
         <BodyText>
-          Найс! У тебя получилось подписаться, подписка активна. Клацни кнопку
-          ниже, если хочешь ее поменеджерить. Знай, что после отписки бот
-          мгновенно удалит тебя из Бородач Клаба.
+          Nice! You've managed to subscribe, and your subscription is active.
+          Click the button below if you want to manage it. Be aware that after
+          unsubscribing, the bot will instantly remove you from the Borodutch
+          Club.
         </BodyText>
         <ButtonContainer onClick={openPortal}>
-          Менеджерить подписку
+          Manage subscription
         </ButtonContainer>
         {!chatInviteLink && (
           <ButtonContainer onClick={fetchChatInviteLink}>
-            Получить ссылку-инвайт!
+            Get the invite link!
           </ButtonContainer>
         )}
         {!!chatInviteLink && (
           <MarginedContainer>
             <BodyText>
-              Ссылка валидна следующие 15 минут, зайти в группу могут только
-              люди с активной подпиской:{' '}
-              <Link url={chatInviteLink}>Войти!</Link>
+              The link is valid for the next 15 minutes, and only people with an
+              active subscription can enter the group:{' '}
+              <Link url={chatInviteLink}>Enter!</Link>
             </BodyText>
           </MarginedContainer>
         )}
@@ -96,16 +95,16 @@ const Dashboard: FC<Props> = ({ token }) => {
 
   return (
     <div>
-      <HeaderText>Привет, {name}!</HeaderText>
+      <HeaderText>Hi, {name}!</HeaderText>
       {!subscriptionId ? renderUnsubscribed() : renderSubscribed()}
       <BodyText>
-        Если есть какие проблемы, пиши мне{' '}
-        <Link url="https://t.me/borodutch">в личку</Link>.
+        If you have any issues, contact me{' '}
+        <Link url="https://t.me/borodutch">on Telegram</Link>.
       </BodyText>
       <BodyText>
-        Главный документ Клуба{' '}
+        The Main Document of the Club{' '}
         <Link url="https://telegra.ph/Glavnyj-dokument-Borodach-Kluba-04-05">
-          тут
+          is here
         </Link>
         .
       </BodyText>

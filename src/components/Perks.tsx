@@ -45,7 +45,7 @@ const Perks: FC<Props> = ({ perks }) => {
   return (
     <div className={root}>
       <SubheaderText>
-        <GradientText>Что вы получите за $23.11 в месяц?</GradientText>
+        <GradientText>What do you get for $23.11 a month?</GradientText>
       </SubheaderText>
       <div className={container}>
         {perks.map((p, i) => (

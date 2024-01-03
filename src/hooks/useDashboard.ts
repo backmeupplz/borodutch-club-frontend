@@ -15,13 +15,6 @@ const useDashboard = (token: string) => {
   const [subscriptionId, setSubscriptionId] = useState<string | null>(null)
   const [chatInviteLink, setChatInviteLink] = useState<string | null>(null)
 
-  const fetchData = async () => {
-    const info = await getInfo(token)
-    setName(info.name)
-    setTelegramId(info.telegramId)
-    setSubscriptionId(info.subscriptionId)
-  }
-
   const openCheckout = async () => {
     const stripe = await stripePromise
     if (!stripe) {
@@ -44,6 +37,13 @@ const useDashboard = (token: string) => {
   }
 
   useEffect(() => {
+    const fetchData = async () => {
+      const info = await getInfo(token)
+      setName(info.name)
+      setTelegramId(info.telegramId)
+      setSubscriptionId(info.subscriptionId)
+    }
+
     fetchData()
   }, [token])
 
