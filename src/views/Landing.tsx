@@ -65,7 +65,7 @@ const Landing = () => {
         ]}
       />
       <HeaderText>
-        This is an elite C and membership costs{' '}
+        This is an elite Club and membership costs{' '}
         <GradientText>$23.11</GradientText> per month
       </HeaderText>
       <BodyText>
@@ -89,7 +89,7 @@ const Landing = () => {
           {
             question: 'Will the Borodutch Club launch my project for me?',
             answer:
-              'No, you pay $23.11 per month for access to the Club and to me personally. You will be helped with advice, finding contractors, simplifying the product concept, choosing a business hypothesis, but not with the actual development, launch, promotion, and the rest. I expect independence from all Club members.',
+              'No, you pay $23.11 per month for access to the Club and to me personally. You will be helped with advice, finding contractors, simplifying the product concept, choosing a business hypothesis, but not with the actual development, launch, promotion, and the rest. I expect all Club members to act independently.',
           },
           {
             question:
@@ -99,9 +99,9 @@ const Landing = () => {
           },
           {
             question:
-              "So, I'm just paying for access to a closed Telegram group?",
+              "So, I'm just paying for access to a private Telegram group?",
             answer:
-              'Yes, exactly. But the people in this closed group are worth their weight in gold.',
+              'Yes, exactly. But the people in this private group are worth their weight in gold.',
           },
           {
             question:

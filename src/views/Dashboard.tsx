@@ -13,6 +13,7 @@ const buttonContainer = classnames(
   'flex',
   'flex-row',
   'justify-center',
+  'items-center',
   'my-4',
   'select-none'
 )
